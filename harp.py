@@ -5,6 +5,7 @@
 import markovify
 from pygame import mixer
 import time
+import random
 
 with open("/home/davis/ProceduralMusic/notes/corpus.txt") as file:
     text = file.read()
@@ -21,4 +22,4 @@ for i in notes:
         string = "notes/"+i+".wav"
         sound = mixer.Sound(string)
         sound.play()
-        time.sleep(1)
+        time.sleep(random.random())
